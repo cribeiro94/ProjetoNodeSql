@@ -13,6 +13,8 @@ class User extends Model {
              bancocliente: DataTypes.STRING,
              agencia: DataTypes.STRING,
              numeroconta: DataTypes.STRING,
+             password: DataTypes.INTEGER,
+             ativo: DataTypes.BOOLEAN,
          }, {
              sequelize 
          })
