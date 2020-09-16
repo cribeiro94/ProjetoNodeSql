@@ -1,14 +1,12 @@
 {
-  "name": "node-sql",
+  "name": "sql",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "client": "cd client && npm start",
     "dev": "nodemon src/server.js"
   },
   "dependencies": {
-    "create-react-app": "^3.4.1",
     "express": "^4.17.1",
     "msnodesqlv8": "^2.0.0",
     "mssql": "^6.2.0",
@@ -19,7 +17,16 @@
   "devDependencies": {
     "nodemon": "^2.0.4",
     "sequelize-cli": "^6.2.0",
-    "tedious": "^8.3.0",
-    "concurrently": "^3.5.0"
-  }
+    "tedious": "^8.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cribeiro94/ProjetoNodeSql.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/cribeiro94/ProjetoNodeSql/issues"
+  },
+  "homepage": "https://github.com/cribeiro94/ProjetoNodeSql#readme",
+  "description": ""
 }
