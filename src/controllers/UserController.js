@@ -1,4 +1,3 @@
-const { update } = require('../models/User');
 const User = require('../models/User');
 
 module.exports = {
@@ -31,5 +30,16 @@ module.exports = {
         await user.destroy();
   
         return res.json();
+      },
+      async auth(req, res) {
+        const { email, password } = req.body;
+
+        const user = await User.findOne({ email, password });
+
+        if (!user) {
+          return res.status(400).json({ error: 'User not found' });
+      }
+
+        return res.json(user);
       }
 };

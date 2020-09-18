@@ -12,6 +12,7 @@ routes.get('/users', UserController.index);
 routes.post('/users', UserController.store);
 routes.put('/users/:id', UserController.update);
 routes.delete('/users/:id', UserController.destroy);
+routes.post('/authenticate', UserController.auth);
 
 routes.get('/users/:user_id/transactions', TransactsController.index);
 routes.post('/users/:user_id/transactions', TransactsController.store);
