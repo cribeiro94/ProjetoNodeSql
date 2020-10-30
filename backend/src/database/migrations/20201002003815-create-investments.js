@@ -16,13 +16,17 @@ module.exports = {
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
       },
-      simula_ganhos: {
+      criptoativos: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
-      simula_perdas: {
+      simulacao_ganhos: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
+      },
+      simulacao_perdas: {
+        type: Sequelize.STRING,
+        allowNull: true,
       },
       created_at: {
         type: Sequelize.DATE,

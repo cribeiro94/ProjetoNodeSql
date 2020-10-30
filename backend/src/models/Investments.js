@@ -3,8 +3,9 @@ const { Model, DataTypes } = require('sequelize');
 class Investments extends Model {
      static init(sequelize) {
          super.init({
-             simula_ganhos: DataTypes.STRING,
-             simula_perdas: DataTypes.STRING,
+             criptoativos: DataTypes.STRING,
+             simulacao_ganhos: DataTypes.STRING,
+             simulacao_perdas: DataTypes.STRING,
          }, {
              sequelize 
          })

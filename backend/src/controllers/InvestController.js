@@ -14,7 +14,7 @@ module.exports = {
     
     async store(req, res) {
          const { user_id } = req.params;
-         const { simula_ganhos, simula_perdas } = req.body;
+         const { criptoativos, simulacao_ganhos, simulacao_perdas } = req.body;
 
          const user = await User.findByPk(user_id);
 
@@ -23,8 +23,9 @@ module.exports = {
          }
 
          const investments = await Investments.create({
-            simula_ganhos,
-            simula_perdas,
+            criptoativos,
+            simulacao_ganhos,
+            simulacao_perdas,
             user_id,
          });
 

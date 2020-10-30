@@ -9,15 +9,15 @@ module.exports = {
         autoIncrement: true,
         allowNull: false,
       },
-      nomecliente: {
+      name: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      cpfcliente: {
+      cpf: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      cnpjcliente: {
+      cnpj: {
         type: Sequelize.STRING,
         allowNull: true,
       },
@@ -25,15 +25,25 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: true,
       },
-      endcliente: {
+      endereco: {
         type: Sequelize.STRING,
         allowNull: false,
       },
       email: {
         type: Sequelize.STRING,
-        allowNull: true,
+        allowNull: false,
+        unique: true,
+        validate: {
+          isEmail: {
+              msg: "Por favor, digite um email válido"
+         }
+      }
+    },
+      password: {
+        type: Sequelize.STRING,
+        allowNull: false,
       },
-      telcliente: {
+      telefone: {
         type: Sequelize.STRING,
         allowNull: false,
       },
@@ -48,6 +58,11 @@ module.exports = {
       numeroconta: {
         type: Sequelize.STRING,
         allowNull: false,
+      },
+      ativo: {
+        type: Sequelize.DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: true,
       },
       created_at: {
         type: Sequelize.DATE,
