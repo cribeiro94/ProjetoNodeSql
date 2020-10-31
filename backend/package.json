@@ -7,7 +7,11 @@
     "dev": "nodemon src/server.js"
   },
   "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "koa": "^2.13.0",
+    "koa-router": "^9.4.0",
     "msnodesqlv8": "^2.0.0",
     "mssql": "^6.2.0",
     "pg": "^8.3.3",

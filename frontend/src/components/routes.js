@@ -2,9 +2,9 @@ import React from 'react'
 
 import { Router, Switch, Route } from 'react-router'
 
-import Login from '../pages/Login'
-import Register from '../pages/Register'
-import Home from '../pages/Home'
+import Login from '../pages/login'
+import Register from '../pages/register'
+import Home from '../pages/home'
 import NotFound from './NotFound'
 
 import {history} from '../history'
